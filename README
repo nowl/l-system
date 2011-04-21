@@ -1,0 +1,34 @@
+This is an <a
+href="http://en.wikipedia.org/wiki/L-system">L-System</a> expander
+that takes a set of rules, a base state, and a number of iterations
+and will expand the base state.
+
+For example using the "algae rules" from Wikipedia we can expand 8
+iterations by calling:
+
+(l-system:expander '("a" ((#\a . "ab") (#\b . "a"))) 8)
+
+outputs the following string:
+
+"abaababaabaababaababaabaababaabaababaababaabaababaababa"
+
+A more complete example using the "dragon curve" rules from wikipedia:
+
+(l-system:expander
+   '("fx" ((#\x . "x+yf")
+          (#\y . "fx-y")
+          (#\f . "f")
+          (#\+ . "+")
+          (#\- . "-")))
+   5)
+
+outputs the following string:
+
+"fx+yf+fx-yf+fx+yf-fx-yf+fx+yf+fx-yf-fx+yf-fx-yf+fx+yf+fx-yf+fx+yf-fx-yf-fx+yf+fx-yf-fx+yf-fx-yf"
+
+----------------------------------------------------------------------
+
+A separate display portion of this project will use the <a
+href="https://github.com/nowl/turtle-graphics">turtle-graphics
+project</a> to attempt to display the string in an OpenGL context.
+

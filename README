@@ -1,5 +1,4 @@
-This is an <a
-href="http://en.wikipedia.org/wiki/L-system">L-System</a> expander
+This is an L-System expander (http://en.wikipedia.org/wiki/L-system)
 that takes a set of rules, a base state, and a number of iterations
 and will expand the base state.
 
@@ -28,7 +27,7 @@ outputs the following string:
 
 ----------------------------------------------------------------------
 
-A separate display portion of this project will use the <a
-href="https://github.com/nowl/turtle-graphics">turtle-graphics
-project</a> to attempt to display the string in an OpenGL context.
+A separate display portion of this project will use the
+turtle-graphics project (https://github.com/nowl/turtle-graphics) to
+attempt to display the string in an OpenGL context.
 
